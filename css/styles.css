@@ -31,6 +31,7 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 h1,
@@ -57,7 +58,7 @@ ul {
 
 .header {
   background-color: var(--primary-white-color);
-  border: 1px solid var(--first-border-color);
+  border-bottom: 1px solid var(--first-border-color);
 }
 
 .main-nav {
@@ -79,11 +80,12 @@ ul {
 .header-logo {
   color: var(--primary-text-color);
 }
+.site-nav-block {
+  margin-left: 93px;
+}
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
-  padding-left: 0;
 }
 
 .site-nav-item:not(:last-child) {
@@ -115,7 +117,6 @@ ul {
 .site-contacts {
   display: flex;
   margin-left: auto;
-  padding-left: 0;
 }
 
 .site-contacts-item:not(:last-child) {
@@ -123,6 +124,9 @@ ul {
 }
 
 .site-contacts-link {
+  padding-bottom: 32px;
+  padding-top: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -134,11 +138,6 @@ ul {
 .site-contacts-link:hover,
 .site-contacts-link:focus {
   color: var(--accent-color);
-}
-
-.site-contacts-item {
-  padding-bottom: 32px;
-  padding-top: 32px;
 }
 
 /* main section*/
@@ -179,19 +178,23 @@ ul {
   color: var(--primary-white-color);
 }
 
-.section-benefits-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: var(--third-text-color);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefits {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
 }
 
 .benefits-list {
@@ -204,6 +207,7 @@ ul {
 }
 
 .benefits-title {
+  margin-top: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -226,7 +230,10 @@ ul {
 .works {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
+}
+
+.works-section {
+  padding-top: 0;
 }
 
 .section-works-title {
@@ -246,13 +253,17 @@ ul {
   margin-right: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /*team*/
 
 .team {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
-  background-color: ;
 }
 
 .section-team {
@@ -282,9 +293,12 @@ ul {
   margin-right: 0;
 }
 
-.team-title {
-  margin-top: 30px;
+.team-aside {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
+.team-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -295,7 +309,6 @@ ul {
 .team-text {
   margin-top: 10px;
 
-  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -313,7 +326,7 @@ ul {
 
 .footer-link {
   display: inline-block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
@@ -330,10 +343,6 @@ ul {
   color: var(--primary-white-color);
 }
 
-.contacts {
-  padding-left: 0;
-}
-
 .footer-contacts {
   font-style: normal;
   font-size: 14px;
@@ -348,21 +357,27 @@ ul {
   color: var(--accent-color);
 }
 
+.footer-item {
+  margin-bottom: 9px;
+}
+
+.footer-item:nth-last-child(-n + 1) {
+  margin-bottom: 0;
+}
 /*Portfolio buttons*/
 
 .filter {
-  padding-left: 0;
-
   text-align: center;
-}
-
-.fiter-title {
-  text-align: center;
+  margin-bottom: 50px;
 }
 
 .filter-item {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-left: -4px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button {
@@ -389,7 +404,6 @@ ul {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
 }
 
 .gallery-item {
@@ -409,11 +423,11 @@ ul {
   margin-bottom: 0;
 }
 
-.gallery-title {
-  margin-top: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+.gallery-aside {
+  padding: 20px 24px;
+}
 
+.gallery-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -421,10 +435,6 @@ ul {
 }
 
 .gallery-description {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
